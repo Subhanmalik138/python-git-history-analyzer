@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitstats"
+version = "1.0.0"
+description = "Git history analyzer CLI: author stats, file churn, commit rhythms, bus factor and streaks from any local repository"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Subhan Malik" }]
+
+[project.scripts]
+gitstats = "gitstats.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
